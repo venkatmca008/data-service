@@ -27,12 +27,6 @@ let csvStream = csv
         });
 
         // open the connection
-        connection.connect((error) => {
-            if (error) {
-                console.error(error);
-            } else {
-
-
                 let checktable = `SELECT count(*) as count FROM information_schema.tables
                 WHERE table_schema = 'quantum'
                 AND table_name = 'quantumairline'`
@@ -69,9 +63,8 @@ let csvStream = csv
                     console.log(error || response);
                 });
 
-                connection.end();
-            }
-        });
+               
+            
     });
 
 stream.pipe(csvStream);
