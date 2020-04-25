@@ -1,0 +1,24 @@
+{
+  "name": "data-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkatmca008/data-service.git"
+  },
+  "author": "Venkatesan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venkatmca008/data-service/issues"
+  },
+  "homepage": "https://github.com/venkatmca008/data-service#readme",
+  "dependencies": {
+    "fast-csv": "^4.1.3",
+    "mysql": "^2.18.1"
+  }
+}
