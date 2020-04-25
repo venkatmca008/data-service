@@ -2,9 +2,9 @@ const fs = require('fs');
 const mysql = require('mysql');
 const csv = require('fast-csv');
 
-var RDS_HOSTNAME = process.env.RDS_HOSTNAME || "quantumairlines.mysql.database.azure.com"
-var RDS_USERNAME = process.env.RDS_USERNAME || "quantum@quantumairlines"
-var RDS_PASSWORD = process.env.RDS_PASSWORD || "Jasmine123"
+var RDS_HOSTNAME = process.env.RDS_HOSTNAME 
+var RDS_USERNAME = process.env.RDS_USERNAME 
+var RDS_PASSWORD = process.env.RDS_PASSWORD 
 
 
 let stream = fs.createReadStream("airlines.dat");
