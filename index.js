@@ -35,7 +35,7 @@ let csvStream = csv
 
                 let checktable = `SELECT count(*) as count FROM information_schema.tables
                 WHERE table_schema = 'quantum'
-                AND table_name = 'test1'`
+                AND table_name = 'quantumairline'`
 
 
                 connection.query(checktable, function (err, results) {
@@ -45,7 +45,7 @@ let csvStream = csv
 
                     if (results[0].count <= 0) {
 
-                        let createquantum = `CREATE TABLE quantum.test1 (
+                        let createquantum = `CREATE TABLE quantum.quantumairline (
                             sno INT NOT NULL,
                             flightname VARCHAR(100) NULL,
                             col VARCHAR(45) NULL,
@@ -64,7 +64,7 @@ let csvStream = csv
 
                 });
 
-                let query = 'INSERT INTO test1 (sno, flightname,col,col2,col3,col4,col5,col6) VALUES ?';
+                let query = 'INSERT INTO quantumairline (sno, flightname,col,col2,col3,col4,col5,col6) VALUES ?';
                 connection.query(query, [myData], (error, response) => {
                     console.log(error || response);
                 });
